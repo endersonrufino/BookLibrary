@@ -16,6 +16,8 @@
 //            });
 //    }
 //}
+using BookLibrary.Models.Contexts;
+using BookLibrary.Models.Interfaces.Contexts;
 using BookLibrary.Models.Interfaces.Repositories;
 using BookLibrary.Models.Interfaces.Services;
 using BookLibrary.Models.Repositories;
@@ -26,7 +28,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddScoped<IConnectionManager, ConnectionManager>();
+builder.Services.AddSingleton<IContextData, ContextDataSqlServer>();
+builder.Services.AddSingleton<IConnectionManager, ConnectionManager>();
 
 builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddScoped<IBookService, BookService>();

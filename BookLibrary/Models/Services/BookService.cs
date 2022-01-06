@@ -15,14 +15,7 @@ namespace BookLibrary.Models.Services
 
         public List<BookViewModel> GetAll()
         {
-            try
-            {
-                return _bookRepository.GetAll();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }            
+            return _bookRepository.GetAll();
         }
     }
 }

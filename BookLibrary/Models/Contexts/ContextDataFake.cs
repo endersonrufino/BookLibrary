@@ -1,6 +1,6 @@
 ﻿using BookLibrary.Models.ViewModels;
 
-namespace BookLibrary.Models.Repositories
+namespace BookLibrary.Models.Contexts
 {
     public static class ContextDataFake
     {
